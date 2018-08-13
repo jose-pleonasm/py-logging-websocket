@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" >
+	<title>Py-logging WebSocket demo</title>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/javascript">
+		var socket = new WebSocket('ws://127.0.0.1:9030/');
+
+		socket.onmessage = function (message) {
+			console.dir(message);
+			var record = JSON.parse(message.data);
+
+			console.log(record);
+		};
+	</script>
+</body>
+</html>

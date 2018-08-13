@@ -1,0 +1,30 @@
+{
+  "name": "py-logging-websocket",
+  "version": "1.0.0",
+  "description": "Handler for py-logging which writes logging records to a WebSocket.",
+  "main": "lib/WebSocketHandler.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "ws": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jose-pleonasm/py-logging-websocket.git"
+  },
+  "author": "jose-pleonasm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jose-pleonasm/py-logging-websocket/issues"
+  },
+  "homepage": "https://github.com/jose-pleonasm/py-logging-websocket#readme",
+  "keywords": [
+    "py-logging",
+    "logging",
+    "websocket"
+  ]
+}
