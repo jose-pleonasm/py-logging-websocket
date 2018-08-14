@@ -9,10 +9,10 @@
 <body>
 	<div id="container"></div>
 	<script type="text/javascript">
+		/* eslint-disable */
 		var socket = new WebSocket('ws://127.0.0.1:9030/');
 
 		socket.onmessage = function (message) {
-			console.dir(message);
 			var record = JSON.parse(message.data);
 
 			console.log(record);
