@@ -18,6 +18,11 @@ var LOGGING = {
 			'level': 'INFO',
 			'formatter': 'json',
 		},
+		'websocket': {
+			'class': 'logging.WebSocketHandler',
+			'level': 'INFO',
+			'formatter': 'json',
+		},
 	},
 	'loggers': {
 		'': {
@@ -30,6 +35,9 @@ var LOGGING = {
 
 logging.config(LOGGING);
 
+
+var i = 0;
 setInterval(function () {
-	logging.getLogger().info('Some message');
+	i++;
+	logging.getLogger().info(i);
 }, 1000);

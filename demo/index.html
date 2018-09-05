@@ -10,13 +10,25 @@
 	<div id="container"></div>
 	<script type="text/javascript">
 		/* eslint-disable */
-		var socket = new WebSocket('ws://127.0.0.1:9030/');
+		var socket = null;
 
-		socket.onmessage = function (message) {
-			var record = JSON.parse(message.data);
+		function open() {
+			socket = new WebSocket('ws://127.0.0.1:9030/');
 
-			console.log(record);
-		};
+			socket.onmessage = function (message) {
+				var record = JSON.parse(message.data);
+
+				console.log(record.message);
+			};
+		}
+
+		function close() {
+			if (socket) {
+				socket.close();
+			}
+		}
+
+		open();
 	</script>
 </body>
 </html>
