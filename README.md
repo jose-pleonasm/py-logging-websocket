@@ -3,7 +3,7 @@ Handler for [py-logging][1] which writes logging records to a WebSocket.
 
 ## Installation
 ```bash
-npm install py-logging
+npm install --save py-logging-websocket
 ```
 
 ## Usage
